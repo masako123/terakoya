@@ -11,12 +11,12 @@
 
 ### できるようになったこと / 楽しかったこと
 - 新しく学んだこと
-   `display: flex` `justify-content`
-   `letter-spacing`
-   `font-weight`
-   `border-collapse`
+  - `display: flex` `justify-content`
+  - `letter-spacing`
+  - `font-weight`
+  - `border-collapse`
 
--  楽しかったこと  
+- 楽しかったこと  
   - 自分の書いたものがうまくビジュアル化されること
   - CSSが自分の想定していた形で画として反映されなかったときに、別のサイトを参考に検証してどこが違うのか、どう変えるとうまくいくのか仮設を立てる、検索でプロパティの意味を調べる、試してみるというサイクルでうまくいったとき
 

@@ -1,9 +1,11 @@
-n = 0
-while n < 100
-    n = n + 1
-    if n.even?
-        puts "#{n}は偶数です"
-    else n.odd?
-        puts "#{n}は奇数です"
+number = 1
+while number < 100
+    if number % 3 ==0
+        puts "Yeaaaaah"
+    elsif number.even?
+        puts "#{number}は偶数です"
+    else number.odd?
+        puts "#{number}は奇数です"
     end
+    number += 1
 end

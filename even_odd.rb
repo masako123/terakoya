@@ -1,5 +1,5 @@
 number = 1
-while number < 100
+while number < 101
     if number % 3 ==0
         puts "Yeaaaaah"
     elsif number.even?

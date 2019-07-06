@@ -16,5 +16,8 @@ number.each do |x|
     end
 end
 
+# 6,7行目を以下に書き換えても実行可能
+# (1..100).each do |x|
+
 
 

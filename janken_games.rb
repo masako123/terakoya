@@ -5,21 +5,21 @@ puts "最初はグー、じゃんけん
 class Janken
     CHOICE = ["グー", "チョキ", "パー"]
     def janken_game(number)
-        while @your_choice == @my_choice do
-            @your_choice = CHOICE[number]
-            @my_choice = CHOICE.sample
-            puts "あなたは#{@your_choice},私は#{@my_choice}"
-            if @your_choice == @my_choice
+        while @my_choice == @cpu_choice do
+            @my_choice = CHOICE[number]
+            @cpu_choice = CHOICE.sample
+            puts "あなたは#{@my_choice},私は#{@cpu_choice}"
+            if @my_choice == @cpu_choice
                 puts "あいこで　しょ！"
             end
         end
     end
     def result
-        if @your_choice == "グー" && @my_choice == "チョキ"
+        if @my_choice == "グー" && @cpu_choice == "チョキ"
             puts "YOU WIIIIIIN!" 
-        elsif @your_choice ==  "チョキ" && @my_choice == "パー"
+        elsif @my_choice ==  "チョキ" && @cpu_choice == "パー"
             puts "YOU WIIIIIIN!"
-        elsif @your_choice ==  "パー" && @my_choice == "グー"
+        elsif @my_choice ==  "パー" && @cpu_choice == "グー"
             puts "YOU WIIIIIIN!"
         else
             puts "YOU LOOOOOOSE"
@@ -75,4 +75,31 @@ janken.result
 # 3
 # あなたはパー,私はチョキ
 # YOU LOOOOOOSE
+
+
+# 再考してみる 
+
+def hands_list
+    hash = {}
+    hash[:rock] = { win: "paper", loose: "scissors", even: "rock" }
+    hash[:scissors] = { win: "rock", loose: "paper", even: "scissors" }
+    hash[:paper] = { win: "scissors", loose: "rock", even: "paper" }
+    hash
+end
+
+def win_choice(hand)
+    hands_list[hand][:win]
+end
+
+player_hand = player.show_hand
+
+cpu_hand = cpu_player.show_random_hand
+
+win_hand = win_choice(player_hand)
+cpu_hand = win_hand
+
+# 途中経過
+# 最終的にplayer.win?で返すようにしたい
+
+
 

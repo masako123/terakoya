@@ -77,29 +77,74 @@ janken.result
 # YOU LOOOOOOSE
 
 
-# 再考してみる 
+# # 再考してみる 
 
-def hands_list
-    hash = {}
-    hash[:rock] = { win: "paper", loose: "scissors", even: "rock" }
-    hash[:scissors] = { win: "rock", loose: "paper", even: "scissors" }
-    hash[:paper] = { win: "scissors", loose: "rock", even: "paper" }
-    hash
-end
+# def hands_list
+#     hash = {}
+#     hash[:rock] = { win: "scissors", loose: "paper", even: "rock" }
+#     hash[:scissors] = { win: "paper", loose: "rock", even: "scissors" }
+#     hash[:paper] = { win: "rock", loose: "scissors", even: "paper" }
+#     hash
+# end
 
-def win_choice(hand)
-    hands_list[hand][:win]
-end
+# def win_choice(hand)
+#     hands_list[hand][:win]
+# end
 
-player_hand = player.show_hand
+# Class JankenRules
+#     Janken = ["グー", "チョキ", "パー"]
+#     def hands_list
+#         hash = {}
+#         hash[:rock] = { win: "scissors", loose: "paper", even: "rock" }
+#         hash[:scissors] = { win: "paper", loose: "rock", even: "scissors" }
+#         hash[:paper] = { win: "rock", loose: "scissors", even: "paper" }
+#         hash
+#     end
+#     def win_choice(hand)
+#         hands_list[hand][:win]
+#     end
+# end
 
-cpu_hand = cpu_player.show_random_hand
+# Class PlayJanken < JankenRules
+#     def show_hand(number)
 
-win_hand = win_choice(player_hand)
-cpu_hand = win_hand
+#     end
+#     def show_random_hand
+#         Janken.sample
+#     end
+# end
 
-# 途中経過
-# 最終的にplayer.win?で返すようにしたい
+# index = 1
+# JankenRules::Janken.each do |x|
+#     puts "#{x}:#{index}"
+#     index += 1
+# end
+
+# janken_game(gets.chomp.to_i - 1)
+# player_hand = player.show_hand
+
+# cpu_hand = cpu_player.show_random_hand
+
+# win_hand = win_choice(player_hand)
+# cpu_hand ==  win_hand #
+
+# # 途中経過
+# # 最終的にplayer.win?で返すようにしたい
+
+# def win
+
+# end
+# def lose
+# end
+
+
+# if player.win?
+#     puts "YOU WIIIIIIN!"
+# elsif player.lose?
+#     puts "YOU LOOOOOOSE"
+# rescue
+#     puts "入力値が正しくありません"
+# end
 
 
 
